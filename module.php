@@ -1,5 +1,5 @@
 <?php
-//session_start();
+session_start();
 //error_reporting(0);
 //if (empty($_SESSION['username'])){
 //header('location:index.php');
@@ -17,7 +17,7 @@
         <meta name="description" content="bootstrap admin template">
         <meta name="author" content="">
 
-        <title>Dashboard Team | Remark Admin Template</title>
+        <title>APP Monitoring Flooding Attack</title>
 
         <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
         <link rel="shortcut icon" href="assets/images/favicon.ico">
@@ -30,13 +30,16 @@
         <!-- Plugins -->
         <link rel="stylesheet" href="assets/vendor/animsition/animsition.css">
         <link rel="stylesheet" href="assets/vendor/asscrollable/asScrollable.css">
-    <a href="../../../home/ilham/Documents/template/Admin Remark/classic/topbar/html/forms/advanced.html"></a>
+        <!--<a href="../../../home/ilham/Documents/template/Admin Remark/classic/topbar/html/forms/advanced.html"></a>-->
         <link rel="stylesheet" href="assets/vendor/switchery/switchery.css">
         <link rel="stylesheet" href="assets/vendor/intro-js/introjs.css">
         <link rel="stylesheet" href="assets/vendor/slidepanel/slidePanel.css">
         <link rel="stylesheet" href="assets/vendor/flag-icon-css/flag-icon.css">
         <link rel="stylesheet" href="assets/examples/css/charts/flot.css">
         <link rel="stylesheet" href="assets/vendor/chartist/chartist.css">
+        <link rel="stylesheet" href="assets/examples/css/charts/chartjs.css">
+
+
         <link rel="stylesheet" href="assets/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.css">
         <link rel="stylesheet" href="assets/vendor/aspieprogress/asPieProgress.css">
         <link rel="stylesheet" href="assets/vendor/jquery-selective/jquery-selective.css">
@@ -45,7 +48,9 @@
         <link rel="stylesheet" href="assets/examples/css/dashboard/team.css">
         <link rel="stylesheet" href="assets/examples/css/tables/datatable.css">
         <link rel="stylesheet" href="assets/vendor/timepicker/jquery-timepicker.css">
-
+           <link rel="stylesheet" href="assets/vendor/chartist/chartist.css">
+        <link rel="stylesheet" href="assets/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.css">
+        <link rel="stylesheet" href="assets/examples/css/charts/chartist.css">
 
         <!-- Fonts -->
         <link rel="stylesheet" href="assets/fonts/web-icons/web-icons.min.css">
@@ -86,12 +91,19 @@
                         data-toggle="collapse">
                     <i class="icon wb-more-horizontal" aria-hidden="true"></i>
                 </button>
-                <a class="navbar-brand navbar-brand-center" href="index.html">
-                    <img class="navbar-brand-logo navbar-brand-logo-normal" src="assets/images/logo.png"
+                <a class="navbar-brand navbar-brand-center" href="#">
+<!--                    <img class="navbar-brand-logo navbar-brand-logo-normal" src="assets/images/logo.png"
                          title="Remark">
                     <img class="navbar-brand-logo navbar-brand-logo-special" src="assets/images/logo-colored.png"
-                         title="Remark">
+                         title="Remark">-->
+                    
+                    
+                    <!--<span class="navbar-brand-text hidden-xs-down"> APLIKASI MONITORING SERANGAN FLOODING ATTACK</span>-->
+                    <img  width="130px"src="assets/foto/upnbaru1.png" alt="..."/>
                     <span class="navbar-brand-text hidden-xs-down"> Remark</span>
+                    
+                    
+                    
                 </a>
                 <button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-search"
                         data-toggle="collapse">
@@ -103,9 +115,10 @@
             <div class="navbar-container container-fluid">
                 <!-- Navbar Collapse -->
                 <div class="collapse navbar-collapse navbar-collapse-toolbar" id="site-navbar-collapse">
+
                     <!-- Navbar Toolbar -->
                     <ul class="nav navbar-toolbar">
-                        <li class="nav-item hidden-float" id="toggleMenubar">
+<!--                        <li class="nav-item hidden-float" id="toggleMenubar">
                             <a class="nav-link" data-toggle="menubar" href="#" role="button">
                                 <i class="icon hamburger hamburger-arrow-left">
                                     <span class="sr-only">Toggle menubar</span>
@@ -113,195 +126,27 @@
                                 </i>
                             </a>
                         </li>
-                        <li class="nav-item hidden-sm-down" id="toggleFullscreen">
-                            <a class="nav-link icon icon-fullscreen" data-toggle="fullscreen" href="#" role="button">
-                                <span class="sr-only">Toggle fullscreen</span>
-                            </a>
-                        </li>
+                        
                         <li class="nav-item hidden-float">
                             <a class="nav-link icon wb-search" data-toggle="collapse" href="#" data-target="#site-navbar-search"
                                role="button">
                                 <span class="sr-only">Toggle Search</span>
                             </a>
-                        </li>
-                        <li class="nav-item dropdown dropdown-fw dropdown-mega">
-                            <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false" data-animation="fade"
-                               role="button">Mega <i class="icon wb-chevron-down-mini" aria-hidden="true"></i></a>
-                            <div class="dropdown-menu" role="menu">
-                                <div class="mega-content">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <h5>UI Kit</h5>
-                                            <ul class="blocks-2">
-                                                <li class="mega-menu m-0">
-                                                    <ul class="list-icons">
-                                                        <li><i class="wb-chevron-right-mini" aria-hidden="true"></i>
-                                                            <a
-                                                                href="advanced/animation.html">Animation</a>
-                                                        </li>
-                                                        <li><i class="wb-chevron-right-mini" aria-hidden="true"></i>
-                                                            <a
-                                                                href="uikit/buttons.html">Buttons</a>
-                                                        </li>
-                                                        <li><i class="wb-chevron-right-mini" aria-hidden="true"></i>
-                                                            <a
-                                                                href="uikit/colors.html">Colors</a>
-                                                        </li>
-                                                        <li><i class="wb-chevron-right-mini" aria-hidden="true"></i>
-                                                            <a
-                                                                href="uikit/dropdowns.html">Dropdowns</a>
-                                                        </li>
-                                                        <li><i class="wb-chevron-right-mini" aria-hidden="true"></i>
-                                                            <a
-                                                                href="uikit/icons.html">Icons</a>
-                                                        </li>
-                                                        <li><i class="wb-chevron-right-mini" aria-hidden="true"></i>
-                                                            <a
-                                                                href="advanced/lightbox.html">Lightbox</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li class="mega-menu m-0">
-                                                    <ul class="list-icons">
-                                                        <li><i class="wb-chevron-right-mini" aria-hidden="true"></i>
-                                                            <a
-                                                                href="uikit/modals.html">Modals</a>
-                                                        </li>
-                                                        <li><i class="wb-chevron-right-mini" aria-hidden="true"></i>
-                                                            <a
-                                                                href="uikit/panel-structure.html">Panels</a>
-                                                        </li>
-                                                        <li><i class="wb-chevron-right-mini" aria-hidden="true"></i>
-                                                            <a
-                                                                href="structure/overlay.html">Overlay</a>
-                                                        </li>
-                                                        <li><i class="wb-chevron-right-mini" aria-hidden="true"></i>
-                                                            <a
-                                                                href="uikit/tooltip-popover.html ">Tooltips</a>
-                                                        </li>
-                                                        <li><i class="wb-chevron-right-mini" aria-hidden="true"></i>
-                                                            <a
-                                                                href="advanced/scrollable.html">Scrollable</a>
-                                                        </li>
-                                                        <li><i class="wb-chevron-right-mini" aria-hidden="true"></i>
-                                                            <a
-                                                                href="uikit/typography.html">Typography</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <h5>Media
-                                                <span class="badge badge-pill badge-success">4</span>
-                                            </h5>
-                                            <ul class="blocks-3">
-                                                <li>
-                                                    <a class="thumbnail m-0" href="javascript:void(0)">
-                                                        <img class="w-full" src="assets/photos/placeholder.png" alt="..." />
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="thumbnail m-0" href="javascript:void(0)">
-                                                        <img class="w-full" src="assets/photos/placeholder.png" alt="..." />
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="thumbnail m-0" href="javascript:void(0)">
-                                                        <img class="w-full" src="assets/photos/placeholder.png" alt="..." />
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="thumbnail m-0" href="javascript:void(0)">
-                                                        <img class="w-full" src="assets/photos/placeholder.png" alt="..." />
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="thumbnail m-0" href="javascript:void(0)">
-                                                        <img class="w-full" src="assets/photos/placeholder.png" alt="..." />
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="thumbnail m-0" href="javascript:void(0)">
-                                                        <img class="w-full" src="assets/photos/placeholder.png" alt="..." />
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <h5 class="mb-0">Accordion</h5>
-                                            <!-- Accordion -->
-                                            <div class="panel-group panel-group-simple" id="siteMegaAccordion" aria-multiselectable="true"
-                                                 role="tablist">
-                                                <div class="panel">
-                                                    <div class="panel-heading" id="siteMegaAccordionHeadingOne" role="tab">
-                                                        <a class="panel-title" data-toggle="collapse" href="#siteMegaCollapseOne" data-parent="#siteMegaAccordion"
-                                                           aria-expanded="false" aria-controls="siteMegaCollapseOne">
-                                                            Collapsible Group Item #1
-                                                        </a>
-                                                    </div>
-                                                    <div class="panel-collapse collapse" id="siteMegaCollapseOne" aria-labelledby="siteMegaAccordionHeadingOne"
-                                                         role="tabpanel">
-                                                        <div class="panel-body">
-                                                            De moveat laudatur vestra parum doloribus labitur sentire partes, eripuit praesenti
-                                                            congressus ostendit alienae, voluptati ornateque accusamus
-                                                            clamat reperietur convicia albucius.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="panel">
-                                                    <div class="panel-heading" id="siteMegaAccordionHeadingTwo" role="tab">
-                                                        <a class="panel-title collapsed" data-toggle="collapse" href="#siteMegaCollapseTwo"
-                                                           data-parent="#siteMegaAccordion" aria-expanded="false"
-                                                           aria-controls="siteMegaCollapseTwo">
-                                                            Collapsible Group Item #2
-                                                        </a>
-                                                    </div>
-                                                    <div class="panel-collapse collapse" id="siteMegaCollapseTwo" aria-labelledby="siteMegaAccordionHeadingTwo"
-                                                         role="tabpanel">
-                                                        <div class="panel-body">
-                                                            Praestabiliorem. Pellat excruciant legantur ullum leniter vacare foris voluptate
-                                                            loco ignavi, credo videretur multoque choro fatemur mortis
-                                                            animus adoptionem, bello statuat expediunt naturales.
-                                                        </div>
-                                                    </div>
-                                                </div>
+                        </li>-->
 
-                                                <div class="panel">
-                                                    <div class="panel-heading" id="siteMegaAccordionHeadingThree" role="tab">
-                                                        <a class="panel-title collapsed" data-toggle="collapse" href="#siteMegaCollapseThree"
-                                                           data-parent="#siteMegaAccordion" aria-expanded="false"
-                                                           aria-controls="siteMegaCollapseThree">
-                                                            Collapsible Group Item #3
-                                                        </a>
-                                                    </div>
-                                                    <div class="panel-collapse collapse" id="siteMegaCollapseThree" aria-labelledby="siteMegaAccordionHeadingThree"
-                                                         role="tabpanel">
-                                                        <div class="panel-body">
-                                                            Horum, antiquitate perciperet d conspectum locus obruamus animumque perspici probabis
-                                                            suscipere. Desiderat magnum, contenta poena desiderant
-                                                            concederetur menandri damna disputandum corporum.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- End Accordion -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
                     </ul>
                     <!-- End Navbar Toolbar -->
-
+                    
                     <!-- Navbar Toolbar Right -->
                     <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" data-toggle="dropdown" href="javascript:void(0)" data-animation="scale-up"
-                               aria-expanded="false" role="button">
-                                <span class="flag-icon flag-icon-us"></span>
+                        <li class="nav-item hidden-sm-down" id="toggleFullscreen">
+                            <a class="nav-link icon icon-fullscreen" data-toggle="fullscreen" href="#" role="button">
+                                <span class="sr-only">Toggle fullscreen</span>
                             </a>
-                            <div class="dropdown-menu" role="menu">
+                        </li>
+                        <li class="nav-item dropdown">
+                           
+<!--                            <div class="dropdown-menu" role="menu">
                                 <a class="dropdown-item" href="javascript:void(0)" role="menuitem">
                                     <span class="flag-icon flag-icon-gb"></span> English</a>
                                 <a class="dropdown-item" href="javascript:void(0)" role="menuitem">
@@ -312,7 +157,7 @@
                                     <span class="flag-icon flag-icon-de"></span> German</a>
                                 <a class="dropdown-item" href="javascript:void(0)" role="menuitem">
                                     <span class="flag-icon flag-icon-nl"></span> Dutch</a>
-                            </div>
+                            </div>-->
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link navbar-avatar" data-toggle="dropdown" href="#" aria-expanded="false"
@@ -323,14 +168,12 @@
                                 </span>
                             </a>
                             <div class="dropdown-menu" role="menu">
-                                <a class="dropdown-item" href="javascript:void(0)" role="menuitem"><i class="icon wb-user" aria-hidden="true"></i> Profile</a>
-                                <a class="dropdown-item" href="javascript:void(0)" role="menuitem"><i class="icon wb-payment" aria-hidden="true"></i> Billing</a>
-                                <a class="dropdown-item" href="javascript:void(0)" role="menuitem"><i class="icon wb-settings" aria-hidden="true"></i> Settings</a>
-                                <div class="dropdown-divider" role="presentation"></div>
-                                <a class="dropdown-item" href="javascript:void(0)" role="menuitem"><i class="icon wb-power" aria-hidden="true"></i> Logout</a>
+                                 <a class="dropdown-item" href="javascript:void(0)" role="menuitem"><i class="icon wb-user" aria-hidden="true"></i> <?php echo $_SESSION['username']?></a>
+                              <a class="dropdown-item" href="logout.php"  role="menuitem"><i class="icon wb-power" aria-hidden="true"></i> Logout</a>
+                              <!--<a class="dropdown-item" href="login.php"  role="menuitem"><i class="icon wb-power" aria-hidden="true"></i> login</a>-->
                             </div>
                         </li>
-                        <li class="nav-item dropdown">
+<!--                        <li class="nav-item dropdown">
                             <a class="nav-link" data-toggle="dropdown" href="javascript:void(0)" title="Notifications"
                                aria-expanded="false" data-animation="scale-up" role="button">
                                 <i class="icon wb-bell" aria-hidden="true"></i>
@@ -412,13 +255,13 @@
                                     </a>
                                 </div>
                             </div>
-                        </li>
-                        <li class="nav-item" id="toggleChat">
+                        </li>-->
+<!--                        <li class="nav-item" id="toggleChat">
                             <a class="nav-link" data-toggle="site-sidebar" href="javascript:void(0)" title="Chat"
                                data-url="site-sidebar.tpl">
                                 <i class="icon wb-chat" aria-hidden="true"></i>
                             </a>
-                        </li>
+                        </li>-->
                     </ul>
                     <!-- End Navbar Toolbar Right -->
                 </div>
@@ -439,169 +282,180 @@
                 </div>
                 <!-- End Site Navbar Seach -->
             </div>
-        </nav>    
-        <div class="site-menubar site-menubar-light">
-            <div class="site-menubar-body">
-                <div>
+        </nav>   
+        
+        <?php
+      
+        if ($_SESSION['username']) {
+            ?>
+            <div class="site-menubar site-menubar-light">
+                <div class="site-menubar-body">
                     <div>
-                        <ul class="site-menu" data-plugin="menu">
-                            <li class="site-menu-category">General</li>
+                        <div>
+                            <ul class="site-menu" data-plugin="menu">
+                                <li class="site-menu-category">General</li>
 
-                            <li class="dropdown site-menu-item has-sub">
-                                <a data-toggle="dropdown" href="?module=home" data-dropdown-toggle="false">
-                                    <i class="site-menu-icon wb-home" aria-hidden="true"></i>
-                                    <span class="site-menu-title">Home</span>
-            <!--                            <span class="site-menu-arrow"></span>-->
-                                </a>
-                                
-                            </li>
-                            <li class="site-menu-category">Elements</li>
-                            <li class="dropdown site-menu-item has-section has-sub">
-                                <a data-toggle="dropdown" href="?module=users" data-dropdown-toggle="false">
-                                    <i class="site-menu-icon wb-users" aria-hidden="true"></i>
-                                    <span class="site-menu-title">Users</span>
+                                <li class="dropdown site-menu-item has-sub">
+                                    <a data-toggle="dropdown" href="?module=home" data-dropdown-toggle="false">
+                                        <i class="site-menu-icon wb-home" aria-hidden="true"></i>
+                                        <span class="site-menu-title">Home</span>
+                <!--                            <span class="site-menu-arrow"></span>-->
+                                    </a>
 
-<!--                            <span class="site-menu-arrow"></span>-->
-                                </a>
-                                
-                            </li>
-                            <li class="dropdown site-menu-item has-section has-sub">
-                                <a data-toggle="dropdown" href="?module=monitoring_ids" data-dropdown-toggle="false">
-                                    <i class="site-menu-icon wb-plugin" aria-hidden="true"></i>
-                                    <span class="site-menu-title">Monitor IDS</span>
-            <!--                            <span class="site-menu-arrow"></span>-->
-                                </a>
-                                
-                            </li>
-                            <li class="dropdown site-menu-item has-sub">
-                                <a data-toggle="dropdown" href="?module=clustering_kmeans" data-dropdown-toggle="false">
-                                    <i class="site-menu-icon wb-extension" aria-hidden="true"></i>
-                                    <span class="site-menu-title">Clustering K-means</span>
-            <!--                            <span class="site-menu-arrow"></span>-->
-                                </a>
-                            </li>
-                            <li class="site-menu-category">Apps</li>
-                            <li class="dropdown site-menu-item has-sub">
-                                <a data-toggle="dropdown" href="?module=rekap" data-dropdown-toggle="false">
-                                    <i class="site-menu-icon wb-book" aria-hidden="true"></i>
-                                    <span class="site-menu-title">Rekap</span>
-            <!--                            <span class="site-menu-arrow"></span>-->
-                                </a>
-                                <!--                <div class="dropdown-menu">
-                                                  <div class="site-menu-scroll-wrap is-list">
-                                                    <div>
-                                                      <div>
-                                                        <ul class="site-menu-sub site-menu-normal-list">
-                                                          <li class="site-menu-item">
-                                                            <a class="animsition-link" href="apps/contacts/contacts.html">
-                                                              <span class="site-menu-title">Contacts</span>
-                                                            </a>
-                                                          </li>
-                                                          <li class="site-menu-item">
-                                                            <a class="animsition-link" href="apps/calendar/calendar.html">
-                                                              <span class="site-menu-title">Calendar</span>
-                                                            </a>
-                                                          </li>
-                                                          <li class="site-menu-item">
-                                                            <a class="animsition-link" href="apps/notebook/notebook.html">
-                                                              <span class="site-menu-title">Notebook</span>
-                                                            </a>
-                                                          </li>
-                                                          <li class="site-menu-item">
-                                                            <a class="animsition-link" href="apps/taskboard/taskboard.html">
-                                                              <span class="site-menu-title">Taskboard</span>
-                                                            </a>
-                                                          </li>
-                                                          <li class="site-menu-item has-sub">
-                                                            <a href="javascript:void(0)">
-                                                              <span class="site-menu-title">Documents</span>
-                                                              <span class="site-menu-arrow"></span>
-                                                            </a>
-                                                            <ul class="site-menu-sub">
+                                </li>
+
+                                    <li class="site-menu-category">Elements</li>
+                                    <li class="dropdown site-menu-item has-section has-sub">
+                                        <a data-toggle="dropdown" href="?module=users" data-dropdown-toggle="false">
+                                            <i class="site-menu-icon wb-users" aria-hidden="true"></i>
+                                            <span class="site-menu-title">Users</span>
+
+        <!--                            <span class="site-menu-arrow"></span>-->
+                                        </a>
+
+                                    </li>
+ 
+                                <li class="dropdown site-menu-item has-section has-sub">
+                                    <a data-toggle="dropdown" href="?module=monitoring_ids" data-dropdown-toggle="false">
+                                        <i class="site-menu-icon wb-plugin" aria-hidden="true"></i>
+                                        <span class="site-menu-title">Monitor IDS</span>
+                <!--                            <span class="site-menu-arrow"></span>-->
+                                    </a>
+
+                                </li>
+                                <li class="dropdown site-menu-item has-sub">
+                                    <a data-toggle="dropdown" href="?module=clustering_kmeans" data-dropdown-toggle="false">
+                                        <i class="site-menu-icon wb-extension" aria-hidden="true"></i>
+                                        <span class="site-menu-title">Clustering K-means</span>
+                <!--                            <span class="site-menu-arrow"></span>-->
+                                    </a>
+                                </li>
+                                <li class="site-menu-category">Apps</li>
+                                <li class="dropdown site-menu-item has-sub">
+                                    <a data-toggle="dropdown" href="?module=rekap" data-dropdown-toggle="false">
+                                        <i class="site-menu-icon wb-book" aria-hidden="true"></i>
+                                        <span class="site-menu-title">Rekap</span>
+                <!--                            <span class="site-menu-arrow"></span>-->
+                                    </a>
+                                    <!--                <div class="dropdown-menu">
+                                                      <div class="site-menu-scroll-wrap is-list">
+                                                        <div>
+                                                          <div>
+                                                            <ul class="site-menu-sub site-menu-normal-list">
                                                               <li class="site-menu-item">
-                                                                <a class="animsition-link" href="apps/documents/articles.html">
-                                                                  <span class="site-menu-title">Articles</span>
+                                                                <a class="animsition-link" href="apps/contacts/contacts.html">
+                                                                  <span class="site-menu-title">Contacts</span>
                                                                 </a>
                                                               </li>
                                                               <li class="site-menu-item">
-                                                                <a class="animsition-link" href="apps/documents/categories.html">
-                                                                  <span class="site-menu-title">Categories</span>
+                                                                <a class="animsition-link" href="apps/calendar/calendar.html">
+                                                                  <span class="site-menu-title">Calendar</span>
                                                                 </a>
                                                               </li>
                                                               <li class="site-menu-item">
-                                                                <a class="animsition-link" href="apps/documents/article.html">
-                                                                  <span class="site-menu-title">Article</span>
+                                                                <a class="animsition-link" href="apps/notebook/notebook.html">
+                                                                  <span class="site-menu-title">Notebook</span>
+                                                                </a>
+                                                              </li>
+                                                              <li class="site-menu-item">
+                                                                <a class="animsition-link" href="apps/taskboard/taskboard.html">
+                                                                  <span class="site-menu-title">Taskboard</span>
+                                                                </a>
+                                                              </li>
+                                                              <li class="site-menu-item has-sub">
+                                                                <a href="javascript:void(0)">
+                                                                  <span class="site-menu-title">Documents</span>
+                                                                  <span class="site-menu-arrow"></span>
+                                                                </a>
+                                                                <ul class="site-menu-sub">
+                                                                  <li class="site-menu-item">
+                                                                    <a class="animsition-link" href="apps/documents/articles.html">
+                                                                      <span class="site-menu-title">Articles</span>
+                                                                    </a>
+                                                                  </li>
+                                                                  <li class="site-menu-item">
+                                                                    <a class="animsition-link" href="apps/documents/categories.html">
+                                                                      <span class="site-menu-title">Categories</span>
+                                                                    </a>
+                                                                  </li>
+                                                                  <li class="site-menu-item">
+                                                                    <a class="animsition-link" href="apps/documents/article.html">
+                                                                      <span class="site-menu-title">Article</span>
+                                                                    </a>
+                                                                  </li>
+                                                                </ul>
+                                                              </li>
+                                                              <li class="site-menu-item">
+                                                                <a class="animsition-link" href="apps/forum/forum.html">
+                                                                  <span class="site-menu-title">Forum</span>
+                                                                </a>
+                                                              </li>
+                                                              <li class="site-menu-item">
+                                                                <a class="animsition-link" href="apps/message/message.html">
+                                                                  <span class="site-menu-title">Message</span>
+                                                                </a>
+                                                              </li>
+                                                              <li class="site-menu-item">
+                                                                <a class="animsition-link" href="apps/projects/projects.html">
+                                                                  <span class="site-menu-title">Projects</span>
+                                                                </a>
+                                                              </li>
+                                                              <li class="site-menu-item">
+                                                                <a class="animsition-link" href="apps/mailbox/mailbox.html">
+                                                                  <span class="site-menu-title">Mailbox</span>
+                                                                </a>
+                                                              </li>
+                                                              <li class="site-menu-item">
+                                                                <a class="animsition-link" href="apps/media/overview.html">
+                                                                  <span class="site-menu-title">Media</span>
+                                                                </a>
+                                                              </li>
+                                                              <li class="site-menu-item">
+                                                                <a class="animsition-link" href="apps/work/work.html">
+                                                                  <span class="site-menu-title">Work</span>
+                                                                </a>
+                                                              </li>
+                                                              <li class="site-menu-item">
+                                                                <a class="animsition-link" href="apps/location/location.html">
+                                                                  <span class="site-menu-title">Location</span>
+                                                                </a>
+                                                              </li>
+                                                              <li class="site-menu-item">
+                                                                <a class="animsition-link" href="apps/travel/travel.html">
+                                                                  <span class="site-menu-title">Travel</span>
                                                                 </a>
                                                               </li>
                                                             </ul>
-                                                          </li>
-                                                          <li class="site-menu-item">
-                                                            <a class="animsition-link" href="apps/forum/forum.html">
-                                                              <span class="site-menu-title">Forum</span>
-                                                            </a>
-                                                          </li>
-                                                          <li class="site-menu-item">
-                                                            <a class="animsition-link" href="apps/message/message.html">
-                                                              <span class="site-menu-title">Message</span>
-                                                            </a>
-                                                          </li>
-                                                          <li class="site-menu-item">
-                                                            <a class="animsition-link" href="apps/projects/projects.html">
-                                                              <span class="site-menu-title">Projects</span>
-                                                            </a>
-                                                          </li>
-                                                          <li class="site-menu-item">
-                                                            <a class="animsition-link" href="apps/mailbox/mailbox.html">
-                                                              <span class="site-menu-title">Mailbox</span>
-                                                            </a>
-                                                          </li>
-                                                          <li class="site-menu-item">
-                                                            <a class="animsition-link" href="apps/media/overview.html">
-                                                              <span class="site-menu-title">Media</span>
-                                                            </a>
-                                                          </li>
-                                                          <li class="site-menu-item">
-                                                            <a class="animsition-link" href="apps/work/work.html">
-                                                              <span class="site-menu-title">Work</span>
-                                                            </a>
-                                                          </li>
-                                                          <li class="site-menu-item">
-                                                            <a class="animsition-link" href="apps/location/location.html">
-                                                              <span class="site-menu-title">Location</span>
-                                                            </a>
-                                                          </li>
-                                                          <li class="site-menu-item">
-                                                            <a class="animsition-link" href="apps/travel/travel.html">
-                                                              <span class="site-menu-title">Travel</span>
-                                                            </a>
-                                                          </li>
-                                                        </ul>
+                                                          </div>
+                                                        </div>
                                                       </div>
-                                                    </div>
-                                                  </div>
-                                                </div> -->
-                            </li>
-                        </ul>      </div>
+                                                    </div> -->
+                                </li>
+                            </ul>      </div>
+                    </div>
                 </div>
             </div>
-        </div>
+
 
         <!-- Page -->
         <div class="page">
 
 
-<?php include "content.php"; ?>
+        <?php include "content.php"; ?>
         </div>
         <!-- End Page -->
 
+    <?php
+}
 
+?>
         <!-- Footer -->
-        <footer class="site-footer">
+<!--        <footer class="site-footer">
             <div class="site-footer-legal">© 2018 <a href="http://themeforest.net/item/remark-responsive-bootstrap-admin-template/11989202">Remark</a></div>
             <div class="site-footer-right">
                 Crafted with <i class="red-600 wb wb-heart"></i> by <a href="http://themeforest.net/user/amazingSurge">amazingSurge</a>
             </div>
-        </footer>
+        </footer>-->
         <!-- Core  -->
         <script src="assets/vendor/babel-external-helpers/babel-external-helpers.js"></script>
 
@@ -637,13 +491,14 @@
         <script src="assets/vendor/bootstrap-datepicker/bootstrap-datepicker.js"></script>
         <script src="assets/vendor/timepicker/jquery.timepicker.min.js"></script>
 
-        <!-- Plugins chart's flot -->
-        <script src="assets/vendor/flot/jquery.flot.js"></script>
-        <script src="assets/vendor/flot/jquery.flot.resize.js"></script>
-        <script src="assets/vendor/flot/jquery.flot.time.js"></script>
-        <script src="assets/vendor/flot/jquery.flot.stack.js"></script>
-        <script src="assets/vendor/flot/jquery.flot.pie.js"></script>
-        <script src="assets/vendor/flot/jquery.flot.selection.js"></script>
+        <script src="assets/vendor/switchery/switchery.js"></script>
+        <script src="assets/vendor/intro-js/intro.js"></script>
+        <script src="assets/vendor/screenfull/screenfull.js"></script>
+        <script src="assets/vendor/slidepanel/jquery-slidePanel.js"></script>
+
+
+
+
 
         <!-- Scripts -->
         <script src="assets/js/Component.js"></script>
@@ -673,22 +528,25 @@
         <script src="assets/js/Plugin/jt-timepicker.js"></script>
 
         <script src="assets/examples/js/dashboard/team.js"></script>
-        <script src="assets/examples/js/charts/flot.js"></script>
+        <!--<script src="assets/examples/js/charts/flot.js"></script>-->
         <script>
-      var $ = jQuery;
-      $(document).ready(function () {
+            var $ = jQuery;
+            $(document).ready(function () {
 //  console.log('hahaha');
 // //       $('#test').click(function(){
 // //           alert('cccp');
 // //       })
-          $('#tabel').DataTable({
-              bFilter: true,
-              dom:
-                      "<'row'<'col-sm-1'l><'col-sm-2'f>>" +
-                      "<'row'<'col-sm-12'tr>>" +
-                      "<'row'<'col-sm-4'i><'col-sm-4 text-center'><'col-sm-4'p>>",
-          });
-      });
+                $('#tabel').DataTable({
+                    bFilter: true,
+                    dom:
+                            "<'row'<'col-sm-1'l><'col-sm-2'f>>" +
+                            "<'row'<'col-sm-12'tr>>" +
+                            "<'row'<'col-sm-4'i><'col-sm-4 text-center'><'col-sm-4'p>>",
+                });
+            });
         </script>
+
+<!--<script src="assets/examples/js/charts/chartjs.js"></script>-->
+
     </body>
 </html>

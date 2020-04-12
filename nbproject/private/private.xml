@@ -3,14 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/var/www/snortkmeans/config/koneksi.php</file>
-            <file>file:/var/www/snortkmeans/modules/users/aksi_users.php</file>
+            <file>file:/var/www/snortkmeans/login.php</file>
+            <file>file:/var/www/snortkmeans/logout.php</file>
+            <file>file:/var/www/snortkmeans/assets/images/UPN%20BARU.png</file>
             <file>file:/var/www/snortkmeans/module.php</file>
+            <file>file:/var/www/snortkmeans/assets/images/UPNABU.png</file>
             <file>file:/var/www/snortkmeans/modules/clustering_kmeans/clustering_kmeanstes1.php</file>
-            <file>file:/var/www/snortkmeans/modules/clustering_kmeans/clustering_kmeans.php</file>
-            <file>file:/var/www/snortkmeans/perhitungan_statis.php</file>
+            <file>file:/var/www/snortkmeans/error_login.php</file>
             <file>file:/var/www/snortkmeans/content.php</file>
-            <file>file:/var/www/snortkmeans/modules/users/users.php</file>
+            <file>file:/var/www/snortkmeans/manifest.json</file>
+            <file>file:/var/www/snortkmeans/assets/images/telematika.jpg</file>
+            <file>file:/var/www/snortkmeans/html/pages/error-400.html</file>
+            <file>file:/var/www/snortkmeans/html/forms/advanced.html</file>
+            <file>file:/var/www/snortkmeans/cek_login.php</file>
+            <file>file:/var/www/snortkmeans/modules/rekap/rekap.php</file>
+            <file>file:/var/www/snortkmeans/modules/clustering_kmeans/clustering_kmeans.php</file>
+            <file>file:/var/www/snortkmeans/modules/monitoring_ids/monitoring_ids.php</file>
             <file>file:/var/www/snortkmeans/modules/home/home.php</file>
         </group>
     </open-files>

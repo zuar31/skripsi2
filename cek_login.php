@@ -5,7 +5,7 @@ $username = $_POST['username'];
 $pass     = md5($_POST['password']);
 
 
-$login=mysqli_query($koneksi,"SELECT * FROM user WHERE username ='$username' AND password='$pass'");
+$login=mysqli_query($koneksi,"SELECT * FROM admin WHERE username ='$username' AND password='$pass'");
 $ketemu=mysqli_num_rows($login);
 $r=mysqli_fetch_array($login);
 
@@ -18,17 +18,18 @@ $r=mysqli_fetch_array($login);
 // Apabila username dan password ditemukan
 if ($ketemu > 0){
   session_start();
-  $_SESSION[id_student]      = $r[id_student];
-  $_SESSION[username]     = $r[username];
+ 
+  $_SESSION[username] = $r['username'];
   header('location:module.php?module=home');
 }
 else{
-    header('location:module.php?module=home');
+//    header('location:module.php?module=home');
 
-  echo "<center>LOGIN GAGAL! <br> 
-        Username atau Password Anda tidak benar.<br>
-        Atau account Anda sedang diblokir<br>";
-  echo "<a href=login.php><b>ULANGI LAGI</b></a></center>";
+//  echo "<center>LOGIN GAGAL! <br> 
+//        Username atau Password Anda tidak benar.<br>
+//        Atau account Anda sedang diblokir<br>";
+//  echo "<a href=login.php><b>ULANGI LAGI</b></a></center>";
+    header('location:error_login.php');
 
 }
 

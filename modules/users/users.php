@@ -8,24 +8,9 @@ switch ($act) {
         ?>
         <div class="page-content">
 
-            <div class="page">
-                <div class="page-header">
-                    <h1 class="page-title">Users</h1>
-                    <!--        <div class="page-header-actions">
-                              <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="../layout/topbar.php">Dashboard</a></li>
-                                <li class="breadcrumb-item active">Users</li>
-                              </ol>
-                            </div>-->
-                </div>
-                <!--      <div class="alert alert-dismissible" role="alert" style="display:none">
-                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                          <span id="message"></span>
-                        </div>-->
 
-                <div class="page-content">
+
+              
 
                     <!-- Panel Basic -->
                     <div class="panel">
@@ -75,8 +60,7 @@ switch ($act) {
                     </div>
                     <!-- End Panel Basic -->
                 </div>
-            </div>
-        </div>
+            
         <?php
         break;
 

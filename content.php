@@ -2,6 +2,8 @@
 
 include "config/koneksi.php";
 
+//if(!isset($_SESSION))session_start())
+
 // Bagian Home
 if ($_GET['module'] == 'home') {
     include"modules/home/home.php";

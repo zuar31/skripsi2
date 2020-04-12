@@ -358,12 +358,12 @@ echo '<br>';
 echo '<br>';
 
 echo 'Jumlah Cluster<br>';
-print_r($cluster[1]);
+print_r($cluster[2]);
 
 echo '<br>';
 echo '<br>';
 
 
 echo 'Centroid perulangan Dua<br>';
-print_r($cluster_s[1]);
+print_r($xc[1]);
 
