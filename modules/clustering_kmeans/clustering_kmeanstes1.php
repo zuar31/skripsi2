@@ -1,6 +1,11 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 $aksi = "modules/rekap/rekap.php";
-$act = $_GET['act'];
+// $act = $_GET['act'];
+$act = isset($_GET['act'])?$_GET['act']:'';
 
 switch ($act) {
     // Tampil form
@@ -8,12 +13,11 @@ switch ($act) {
 
         $start_date = empty($_GET['start_date']) ? date('m/d/Y') : $_GET['start_date'];
         $start_time = empty($_GET['start_time']) ? date('00:00:00') : $_GET['start_time'];
-        $end_date = empty($_GET['end_date']) ? date('m/d/Y') : $_GET['end_date'];
+        // $end_date = empty($_GET['end_date']) ? date('m/d/Y') : $_GET['end_date'];
         $end_time = empty($_GET['end_time']) ? date('23:59:00') : $_GET['end_time'];
 
         $start = date('Y-m-d', strtotime($start_date)) . ' ' . date('H:i:s', strtotime($start_time));
-//        echo $start;
-        $end = date('Y-m-d', strtotime($end_date)) . ' ' . date('H:i:s', strtotime($end_time));
+        $end = date('Y-m-d', strtotime($start_date)) . ' ' . date('H:i:s', strtotime($end_time));
 
         $tipe_serangan[1] = 'High';
         $tipe_serangan[2] = 'Medium';
@@ -34,19 +38,22 @@ switch ($act) {
 
                         <div class="example-wrap">
                             <div class="example datepair-wrap" data-plugin="datepair">
-                                <form>
-                                    <table width="60%" style="margin-bottom:2em">
-                                        <tr>
-                                            <td width="45%">
-                                                <div class="input-daterange-wrap">
+                                <form action="?module=clustering_kmeans" method="POST"> 
+                                    <div class="form-group row">
+                                        <div class="col-sm-2" ><b>Filter Pencarian</b></div>
+                                        <div class="col-md-2" style="text-align:left;">
+                                            <div class="input-daterange-wrap">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="icon wb-calendar" aria-hidden="true"></i>
+                                                    </span>
+                                                    <input type="text" value="<?php echo isset($start_date)?date('m/d/Y',strtotime($start_date)):date('m/d/Y'); ?>" class="form-control datepair-date datepair-start" name="start_date" data-plugin="datepicker" id="tanggal">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4" style="text-align:left;">
+                                            <div class="input-daterange-wrap">
                                                     <div class="input-daterange">
-                                                        <div class="input-group">
-                                                            <span class="input-group-addon">
-                                                                <i class="icon wb-calendar" aria-hidden="true"></i>
-                                                            </span>
-                                                            <input type="text" value="<?php echo isset($start_date)?date('m/d/Y',strtotime($start_date)):date('m/d/Y'); ?>" class="form-control datepair-date datepair-start" name="start_date" data-plugin="datepicker">
-                                                        </div>
-   
                                                         <div class="input-group">
                                                             <span class="input-group-addon">
                                                                 <i class="icon wb-time" aria-hidden="true"></i>
@@ -54,12 +61,6 @@ switch ($act) {
                                                             <input type="text" value="<?php echo isset($start_date)?date('00:00:00',strtotime($start_date)):date('00:00:00'); ?>" class="form-control datepair-time datepair-start" name="start_time" data-plugin="timepicker"
                                                                    />
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td width="10%" style="text-align:center"><div class="input-daterange-to">to</div></td>
-                                            <td width="45%">
-                                                  <div class="input-daterange-wrap">
                                                             <div class="input-group">
                                                                 <span class="input-group-addon">
                                                                     <i class="icon wb-time" aria-hidden="true"></i>
@@ -67,37 +68,34 @@ switch ($act) {
                                                                 <input type="text" value="<?php echo isset($end_time)?date('23:59:00',strtotime($end_time)):date('H:i:s'); ?>" class="form-control datepair-time datepair-end" name="end_time" data-plugin="timepicker"
                                                                    />
                                                             </div>
-<!--                                                <div class="input-daterange-wrap">
-                                                    <div class="input-daterange">
-                                                        <div class="input-group">
-                                                            <span class="input-group-addon">
-                                                                <i class="icon wb-calendar" aria-hidden="true"></i>
-                                                            </span>
-                                                            <input type="text" value="<?php echo isset($end_date)?date('m/d/Y',strtotime($end_date)):date('m/d/Y'); ?>" class="form-control datepair-date datepair-end" name="end_date" data-plugin="datepicker">
-                                                        </div>
-                                                        <div class="input-group">
-                                                            <span class="input-group-addon">
-                                                                <i class="icon wb-time" aria-hidden="true"></i>
-                                                            </span>
-                                                            <input type="text" value="<?php echo isset($end_date)?date('H:i:s',strtotime($end_date)):date('H:i:s'); ?>" class="form-control datepair-time datepair-end" name="end_time" data-plugin="timepicker"
-                                                                   />
                                                         </div>
                                                     </div>
-                                                </div>-->
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2"></td>
-                                        <input type="hidden" name="module" value="clustering_kmeans">
-                                        <td align="right"><button type="submit" class="btn btn-primary btn-md">Proses</button></td>
-                                        </tr>
-                                    </table>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin-bottom: 0.2em">
+                                        <div class="col-md-8 text-right">
+                                            <button type="submit" class="btn btn-primary btn-md">Proses</button>
+                                        </div>
+                                    </div>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <script src="assets/vendor/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+            <script>
+                $(document).ready(function(){
+                        $('#tanggal').datepicker({
+                        // placement: 'button',
+                        format: "mm/dd/yyyy",
+                        align: 'left',
+                        autoclose: true,
+                        orientation: "right bottom"
+                    })
+
+                })
+            </script>
 
             <?php
             if(!empty($_GET['start_date'])){
@@ -989,7 +987,6 @@ switch ($act) {
        
 
 
-
         <script src="assets/vendor/babel-external-helpers/babel-external-helpers.js"></script>
         <script src="assets/vendor/jquery/jquery.js"></script>
         <script src="assets/vendor/popper-js/umd/popper.min.js"></script>
@@ -1018,10 +1015,11 @@ switch ($act) {
         <script src="assets/js/config/tour.js"></script>
         <script>
             (function () {
+
                 var pieData = {
                     labels: ["High", "Medium", "Low"],
                     datasets: [{
-                            data: [<?= $cluster[3][1] ?>, <?= $cluster[3][2] ?>, <?= $cluster[3][3] ?>],
+                            data: [<?= isset($cluster[3][1])?$cluster[3][1]:0 ?>, <?= isset($cluster[3][2])?$cluster[3][2]:0 ?>, <?= isset($cluster[3][3])?$cluster[3][3]:0 ?>],
                             backgroundColor: [Config.colors("red", 400), Config.colors("yellow", 400), Config.colors("green", 400)],
                             hoverBackgroundColor: [Config.colors("red", 600), Config.colors("yellow", 600), Config.colors("green", 600)]
                         }]
