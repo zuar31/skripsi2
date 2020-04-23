@@ -73,6 +73,11 @@ session_start();
             Breakpoints();
         </script>
     </head>
+    <style>
+    .container-fluid.navbar-container, .navbar-brand {
+  padding-left: 0;
+}
+    </style>
     <body class="animsition site-navbar-small dashboard">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -96,11 +101,12 @@ session_start();
                          title="Remark">
                     <img class="navbar-brand-logo navbar-brand-logo-special" src="assets/images/logo-colored.png"
                          title="Remark">-->
-                    
+                    <img class="navbar-brand" src="assets/foto/upnbaru1.png" alt="logo">
                     
                     <!--<span class="navbar-brand-text hidden-xs-down"> APLIKASI MONITORING SERANGAN FLOODING ATTACK</span>-->
-                    <img  width="130px"src="assets/foto/upnbaru1.png" alt="..."/>
-                    <span class="navbar-brand-text hidden-xs-down"> Remark</span>
+                    <!--<img  width="200px"height="100px" class="navbar-brand-logo" src="assets/foto/upnbaru1.png" alt="..."/>-->
+
+<!--<span class="navbar-brand-text hidden-xs-down"> Remark</span>-->
                     
                     
                     
