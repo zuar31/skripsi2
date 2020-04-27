@@ -74,6 +74,7 @@ session_start();
         </script>
     </head>
     <style>
+
 .navbar-brand img
 {
     position: absolute;
@@ -82,6 +83,9 @@ session_start();
     top: 0;
     text-align: center;
     margin: auto;
+}
+    .container-fluid.navbar-container, .navbar-brand {
+  padding-left: 0;
 }
     </style>
     <body class="animsition site-navbar-small dashboard">
@@ -107,11 +111,17 @@ session_start();
                          title="Remark">
                     <img class="navbar-brand-logo navbar-brand-logo-special" src="assets/images/logo-colored.png"
                          title="Remark">-->
-                    
+                    <img class="navbar-brand" src="assets/foto/upnbaru1.png" alt="logo">
                     
                     <!--<span class="navbar-brand-text hidden-xs-down"> APLIKASI MONITORING SERANGAN FLOODING ATTACK</span>-->
+
                     <img  class="img-responsive" src="assets/foto/upnbaru1.png" alt="..."/>
                     <!-- <span class="navbar-brand-text hidden-xs-down"> Remark</span> -->
+
+                    <!--<img  width="200px"height="100px" class="navbar-brand-logo" src="assets/foto/upnbaru1.png" alt="..."/>-->
+
+<!--<span class="navbar-brand-text hidden-xs-down"> Remark</span>-->
+
                     
                     
                     
